@@ -1,0 +1,14 @@
+PATH
+  remote: .
+  specs:
+    translation_handler (1.0.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  translation_handler!

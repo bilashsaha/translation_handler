@@ -1,0 +1,7 @@
+---
+:en:
+  :hello: hello test
+  :user:
+    :attributes:
+      :email: def@yahoo.com
+      :name: last first

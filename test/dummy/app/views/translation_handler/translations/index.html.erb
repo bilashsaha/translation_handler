@@ -1,0 +1,10 @@
+<%= kolas_url %>
+<ul>
+  <% @available_locales.each do |locale| %>
+      <li><%= link_to locale, edit_translation_handler_translation_path(:id => locale) %></li>
+  <% end %>
+</ul>
+
+<%= link_to 'Create New Language', new_translation_handler_translation_path %>
+
+asfjbskjfbsdf

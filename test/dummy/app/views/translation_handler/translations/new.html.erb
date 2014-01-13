@@ -1,0 +1,4 @@
+<%= form_for '', :url => translation_handler_translations_url, :html => {:method => :post} do |f| %>
+    <%= text_field_tag 'language' %>
+    <%= f.submit 'Create' %>
+<% end %>

@@ -1,0 +1,6 @@
+<%= form_for '', :url => translation_handler_translation_url(:id => params[:id]), :html => {:method => :put} do |f| %>
+    <%= @html.html_safe %>
+    <%= hidden_field_tag 'id', params[:id] %>
+    <%= f.submit 'Update' %>
+<% end %>
+
