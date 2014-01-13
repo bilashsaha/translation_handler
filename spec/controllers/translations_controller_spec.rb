@@ -16,7 +16,7 @@ describe TranslationHandler::TranslationsController, :type => :controller do
   end
 
   it "Should update translation values according to update" do
-    hash = {:en => {:hello => "Hello World", :user => {:attributes => {:email => 'abc@gmail.com', :name => 'first last'}}}}
+    hash = {"en" => {"hello" => "Hello World", "user" => {"attributes" => {"email" => 'abc@gmail.com', "name" => 'first last'}}}}
     File.open(File.expand_path(File.dirname(__FILE__) + '/../../test/dummy/config/locales/en.yml'), "w") do |f|
       f << hash.to_yaml
     end
