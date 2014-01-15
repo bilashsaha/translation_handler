@@ -6,6 +6,10 @@ A MVC based Rails Engine(gem) that manages translations available from (config/l
 # How to install
 Just include the gem inside your Gemfile
 
+    gem "translation_handler", "~> 0.0.3"
+    
+or direct from github master branch
+
     gem 'translation_handler', :git => 'git@github.com:bilashsaha/translation_handler.git'
     
 Then run
