@@ -14,7 +14,13 @@ module TranslationHandler
           out += "" + make_html(value, :indent_level => indent_level + 2) + " " * (indent_level + 2) + "</li>"
         else
           $element += 1
-          out += "<input type='text' name='field_#{$element}' value='#{value}'></input></li>"
+          if value.length > 150
+            out += "<textarea class='translation_field' name='field_#{$element}'>#{value}</textarea></li>"
+          else
+            out += "<input class='translation_field' type='text' name='field_#{$element}' value='#{value}'></input></li>"
+          end
+
+
         end
       end
       out += " " * indent_level + "</ul>"
@@ -38,6 +44,7 @@ module TranslationHandler
       base_locale_file = YAML.load_file(Rails.root + "config/locales/#{params[:id]}.yml").to_hash
       $element = 0
       prepared_yaml = prepare_yml_hash(base_locale_file).to_yaml
+      #raise prepared_yaml.inspect
       File.open(Rails.root + "config/locales/#{params[:id]}.yml", "w") do |f|
         f << prepared_yaml
       end
