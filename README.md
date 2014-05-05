@@ -1,4 +1,4 @@
-Translation Handler
+Translation Handler [![Gem Version](https://badge.fury.io/rb/translation_handler.svg)](http://badge.fury.io/rb/translation_handler)
 ===================
 
 A MVC based Rails Engine(gem) that manages translations available from (config/locals/*.yml) through making customized views so that translation files can be managed easily from User Interface.
